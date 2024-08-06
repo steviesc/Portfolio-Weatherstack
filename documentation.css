@@ -1,0 +1,301 @@
+/* Fonts */
+@font-face {
+  font-family: FriendlyFont;
+  src: url(./Fonts/FriendlyFont.woff);
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(/Fonts/open-sans-v34-latin-regular.woff2);
+}
+@font-face {
+  font-family: "Linearicons";
+  src: url(./Fonts/Linearicons.ttf);
+}
+@font-face {
+  font-family: Promo;
+  src: url(./Fonts/Promo-Bold.woff);
+}
+
+/* Body */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.4;
+}
+section {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-right: 15px;
+  max-width: 1170px;
+  padding-left: 15px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+/* Nav */
+.header {
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  border-radius: 0;
+  top: 0;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  height: 70px;
+}
+.header.documentation {
+  background: #244f67;
+  background-size: cover;
+  background-position: top;
+}
+.button,
+img {
+  vertical-align: middle;
+}
+hr,
+img {
+  border: 0;
+}
+.header .logo {
+  float: left;
+  padding-left: 15px;
+}
+.header .logo img {
+  display: inline-block;
+  margin-right: 10px;
+  top: 1px;
+  position: relative;
+  margin-left: 40px;
+}
+.header .logo a {
+  color: #333;
+  margin-top: 14px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: normal;
+  float: left;
+  margin-left: 8px;
+}
+
+.header ul {
+  margin: 0;
+  float: right;
+  padding-left: 0;
+  list-style: none;
+}
+.header ul > li,
+.header ul > li > a {
+  display: -webkit-inline-box;
+  position: relative;
+}
+.header ul > li {
+  float: left;
+}
+
+.header ul > li > a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 35px;
+  margin: 16px 15px 19px;
+}
+
+.button,
+.header .logo a,
+.header ul > li > a,
+section.hero .container h2,
+section.hero .container h4 {
+  font-family: Promo, Helvetica, Arial, sans-serif;
+}
+
+.header ul > li.status > a::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+  display: inline-block;
+  background-color: #47c652;
+  position: relative;
+  top: 1px;
+  margin-left: 4px;
+  left: -6px;
+}
+
+.header ul > li.action.login > a {
+  padding: 0 10px 1px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0 10px;
+  border-radius: 3px;
+  margin-right: 0;
+}
+
+.header ul > li.action > a {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0 10px;
+  border-radius: 3px;
+  margin-right: 0;
+}
+
+.header ul > li.action.cta > a {
+  background: #f47b21;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 10px 1px;
+  margin-right: 0;
+}
+
+/* Hero Documentation */
+section.hero.documentation {
+  padding: 85px 0 30px;
+  color: rgba(22, 34, 47, 1);
+  background-size: contain;
+  margin-bottom: 0;
+  background: #eff2f5;
+  background-repeat: no-repeat;
+}
+section.hero.documentation .intro_buttons .left,
+section.hero.documentation .intro_buttons .right {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+section.hero.documentation .intro_buttons .right {
+  float: right;
+}
+section.hero.documentation .intro_buttons div h3::before {
+  font-family: Linearicons;
+  font-size: 25px;
+  content: "\e661";
+  border: none;
+  padding: 0;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  font-weight: 400;
+  margin-bottom: 0;
+  top: 4px;
+}
+section.hero.documentation .intro_buttons div.left h3::before {
+  content: "\e837";
+}
+section.hero.documentation .intro_buttons div h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+section.hero.documentation .intro_buttons div a.go_to_quickstart,
+section.hero.documentation .intro_buttons div a.sign_up {
+  background: #244f67;
+  color: #fff;
+}
+section.hero.documentation .intro_buttons div a {
+  background-size: cover;
+  background-position: top;
+  padding: 10px 10px;
+  height: auto;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 20px;
+  display: block;
+  width: 190px;
+  text-align: center;
+  background: #dde0e2;
+  color: #637280;
+}
+section.hero.documentation .intro_buttons div.right h3::before {
+  content: "\e90c";
+}
+
+/* API Doc */
+section.api_documentation {
+  padding: 30px 0;
+  text-align: left;
+  color: rgba(22, 34, 47, 1);
+  background: #fff;
+}
+section.api_documentation .container .menu {
+  float: left;
+  width: 250px;
+  color: rgba(22, 34, 47, 1);
+  margin-top: 15px;
+  border-right: 1px solid #eee;
+}
+section.api_documentation .container .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  background: #fff;
+}
+section.api_documentation .container .menu ul li.doc_heading {
+  font-weight: 600;
+  padding: 10px 15px 11px;
+  position: relative;
+  font-size: 16px;
+}
+section.api_documentation .container .menu ul li a:hover {
+  text-decoration: none;
+  background: #eee;
+}
+section.api_documentation .container .menu ul li a {
+  padding: 5px 15px;
+  display: block;
+  font-weight: 300;
+  color: rgba(22, 34, 47, 1);
+}
+section.api_documentation .container .menu ul.github {
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+section.api_documentation .container .menu ul.github li a::before {
+  background: url("https://weatherstack.com/site_images/github_x2.png");
+  background-size: auto;
+  content: "";
+  padding: 10px;
+  position: absolute;
+  left: 15px;
+  background-size: contain;
+}
+section.api_documentation .container .menu ul.github li a {
+  font-weight: 600;
+  padding: 10px 15px 11px 45px;
+  position: relative;
+  font-size: 14px;
+  color: rgba(22, 34, 47, 1);
+  margin-bottom: 0;
+  background: #eee;
+}

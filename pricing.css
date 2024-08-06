@@ -1,0 +1,1048 @@
+/* Fonts */
+@font-face {
+  font-family: FriendlyFont;
+  src: url(./Fonts/FriendlyFont.woff);
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(/Fonts/open-sans-v34-latin-regular.woff2);
+}
+@font-face {
+  font-family: "Linearicons";
+  src: url(./Fonts/Linearicons.ttf);
+}
+@font-face {
+  font-family: Promo;
+  src: url(./Fonts/Promo-Bold.woff);
+}
+
+/* All */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+h5,
+p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* body */
+body {
+  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.4;
+  margin: 0;
+}
+.container:after,
+.header .logo:after,
+.header ul:after {
+  clear: both;
+}
+.clearfix:after,
+.clearfix:before,
+.container:after,
+.container:before {
+  display: table;
+  content: " ";
+}
+.container,
+section,
+section .container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.container,
+section .container {
+  padding-right: 15px;
+  max-width: 1170px;
+  padding-left: 15px;
+  position: relative;
+}
+a,
+section.hero .ip_demo .ip_body .switch_menu a:hover,
+section.hero.pricing .cycle a:hover,
+section.showoff .container .grid_menu a:hover {
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+  color: #283f59;
+}
+:active,
+:focus,
+a:active,
+a:hover {
+  outline: 0;
+}
+a:hover,
+footer .right_side span a,
+section.cta span > span,
+section.faq span > a,
+section.faq ul + span span.underline,
+section.preapp form fieldset.captcha .line.checkboxes label a,
+section.preapp form fieldset.plan .line > label span {
+  text-decoration: underline;
+}
+
+/* Nav */
+.header {
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  border-radius: 0;
+  top: 0;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  height: 70px;
+}
+
+.button,
+img {
+  vertical-align: middle;
+}
+hr,
+img {
+  border: 0;
+}
+.header .logo {
+  float: left;
+  padding-left: 15px;
+}
+.header .logo img {
+  display: inline-block;
+  margin-right: 10px;
+  top: 1px;
+  position: relative;
+  margin-left: 40px;
+}
+.header .logo a {
+  color: #333;
+  margin-top: 14px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: normal;
+  float: left;
+  margin-left: 8px;
+}
+
+.header ul {
+  margin: 0;
+  float: right;
+  padding-left: 0;
+  list-style: none;
+}
+.header ul > li,
+.header ul > li > a {
+  display: -webkit-inline-box;
+  position: relative;
+}
+.header ul > li {
+  float: left;
+}
+
+.header ul > li > a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 35px;
+  margin: 16px 15px 19px;
+}
+
+.button,
+.header .logo a,
+.header ul > li > a,
+section.hero .container h2,
+section.hero .container h4 {
+  font-family: Promo, Helvetica, Arial, sans-serif;
+}
+
+.header ul > li.status > a::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+  display: inline-block;
+  background-color: #47c652;
+  position: relative;
+  top: 1px;
+  margin-left: 4px;
+  left: -6px;
+}
+
+.header ul > li.action.login > a {
+  padding: 0 10px 1px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0 10px;
+  border-radius: 3px;
+  margin-right: 0;
+}
+
+.header ul > li.action > a {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0 10px;
+  border-radius: 3px;
+  margin-right: 0;
+}
+
+.header ul > li.action.cta > a {
+  background: #f47b21;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 10px 1px;
+  margin-right: 0;
+}
+
+/* Pricing */
+section.pricing {
+  padding: 50px 0 65px;
+  text-align: center;
+  background: #fff;
+}
+section.hero.pricing {
+  padding-top: 110px;
+  padding-bottom: 210px;
+  background: url(./Pic/mountains.svg),
+    linear-gradient(135deg, #1f4e69 0, #164058 100%);
+  color: #fff;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+section.hero h2 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 32px;
+  margin-top: 0;
+}
+section.hero .cycle {
+  display: block;
+  margin-top: 40px;
+}
+.cycle {
+  background-clip: border-box;
+  border: 0 solid rgba(55, 63, 67, 0.125);
+  padding: 5px 0 5px 0;
+  border-radius: 5px;
+  vertical-align: middle;
+  font-weight: 400;
+  color: #49545a;
+}
+
+section.hero.pricing .cycle a {
+  position: relative;
+  background: #fff;
+  padding: 10px 10px 11px 30px;
+  border-radius: 5px;
+  width: 150px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+section.hero.pricing .cycle a::before {
+  font-family: Linearicons;
+  font-size: 20px;
+  display: inline-block;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  margin-right: 10px;
+  vertical-align: middle;
+  content: "\e98d";
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+section.hero .cycle a.selected::before {
+  content: "\e999";
+}
+section.hero.pricing .cycle a.selected {
+  background: #15394c;
+  color: #fff;
+}
+section.hero.pricing .cycle a.yearly::after {
+  position: absolute;
+  right: -15px;
+  top: -16px;
+  background: #8a9bae;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 8px 4px 8px;
+  border-radius: 3px;
+  content: "up to 15% Discount";
+}
+section.pricing .container .plan {
+  text-align: left;
+  display: inline-block;
+  width: 218px;
+  margin-right: 5px;
+  margin-left: 5px;
+  position: relative;
+  border-radius: 5px;
+  z-index: 0;
+  color: rgba(22, 34, 47, 1);
+}
+section.pricing .container .subscriptions {
+  margin: -180px 0 0;
+  padding: 0;
+  text-align: center;
+  color: rgba(22, 34, 47, 1);
+  display: flex;
+  align-items: flex-start;
+}
+section.pricing .container .subscriptions .main_container {
+  border-radius: 5px;
+  padding-bottom: 10px;
+  background: #ebeff4;
+  text-align: center;
+}
+section.pricing .container .subscriptions .main_container .heading {
+  padding: 35px 0 15px;
+  font-size: 18px;
+  font-family: Promo, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+section.pricing .container .subscriptions .main_container .heading::before {
+  font-family: Linearicons;
+  font-size: 30px;
+  display: inline-block;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-top: -7px;
+  content: "\e605";
+}
+section.pricing
+  .container
+  .subscriptions
+  .main_container
+  .heading.free::before {
+  content: "\e64a";
+  top: 2px;
+  position: relative;
+}
+section.pricing
+  .container
+  .subscriptions
+  .main_container
+  .heading.standard::before {
+  content: "\e653";
+}
+section.pricing
+  .container
+  .subscriptions
+  .main_container
+  .heading.professional::before {
+  content: "\e647";
+}
+section.pricing
+  .container
+  .subscriptions
+  .main_container
+  .heading.business::before {
+  content: "\e637";
+}
+section.pricing
+  .container
+  .subscriptions
+  .main_container
+  .heading.enterprise::before {
+  content: "\e60b";
+}
+section.pricing .container .subscriptions .main_container .description {
+  height: 100px;
+  padding: 15px 15px;
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 20px;
+}
+section.pricing .container .subscriptions .main_container .price {
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  line-height: normal;
+}
+section.pricing .container .subscriptions .main_container .price span {
+  font-size: 20px;
+  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial,
+    sans-serif;
+  font-weight: 600;
+  margin-right: 2px;
+}
+section.pricing .container .subscriptions .main_container .price small {
+  font-size: 12px;
+}
+section.pricing .container .subscriptions .main_container a {
+  background: #dde1e7;
+  padding: 10px 10px;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 14px;
+  font-family: Promo, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #848484;
+  width: 90%;
+  border-radius: 3px;
+}
+section.pricing .container .subscriptions .features_container {
+  padding: 0;
+  list-style: none;
+  margin-top: 25px;
+}
+section.pricing .container .subscriptions .features_container ul {
+  margin: 0 -7px 0 0;
+  padding: 0;
+  list-style: none;
+  border-right: 1px solid #dde1e7;
+}
+section.pricing .container .subscriptions .features_container ul li::before {
+  font-family: Linearicons;
+  font-size: 20px;
+  display: inline-block;
+  font-weight: 400;
+  margin-right: 10px;
+  margin-top: -3px;
+  content: "\e71f";
+  position: relative;
+  top: 1px;
+  vertical-align: middle;
+  text-transform: none;
+  font-variant: normal;
+}
+section.pricing .container .subscriptions .features_container ul li {
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 13px;
+  padding-left: 18px;
+  border-bottom: 0;
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_api_requests::before {
+  content: "\e90b";
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_support::before {
+  content: "\e723";
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_current::before {
+  content: "\e655";
+}
+.invisible,
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_empty::before {
+  visibility: hidden;
+}
+span.align-top {
+  font-size: 14px !important;
+  vertical-align: top;
+}
+section.pricing
+  .container
+  .subscriptions
+  .main_container
+  .price
+  small.yearly_price {
+  display: block;
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 12px;
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.currency_module::before {
+  content: "\e75f";
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  span.billing_module::before {
+  content: "\1F6C8";
+}
+section.pricing .container .subscriptions .features_container ul span::before {
+  font-family: Linearicons;
+  font-size: 20px;
+  display: inline-block;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  margin-left: 6px;
+  vertical-align: middle;
+  margin-top: -4px;
+  content: "\1F6C8";
+  bottom: 2px;
+  position: relative;
+  color: #16222f;
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_autocomplete::before {
+  content: "\e778";
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_https::before {
+  content: "\e668";
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_astronomy::before {
+  content: "\e645";
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_hourbyhour::before {
+  content: "\e8ea";
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_history::before {
+  content: "\e8e4";
+}
+section.pricing .container .subscriptions .highlighted .main_container::before {
+  display: block;
+  position: absolute;
+  top: -30px;
+  width: 100%;
+  height: 30px;
+  color: #fff;
+  font-size: 12px;
+  font-family: Promo, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  padding-top: 7px;
+  content: "Most Popular";
+  background: #15394c;
+  z-index: 1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+section.pricing .container .subscriptions .highlighted .main_container a {
+  background: #15394c;
+  color: #fff;
+}
+section.pricing .container .subscriptions > .highlighted .main_container {
+  box-shadow: 0 1rem 3rem 0 rgba(177, 177, 177, 0.4);
+  background: #fff;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_forecast::before {
+  content: "\e647";
+}
+
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_bulk::before {
+  content: "\e977";
+}
+section.pricing
+  .container
+  .subscriptions
+  .features_container
+  ul
+  li.feature_custom::before {
+  content: "\e672";
+}
+
+section.pricing .container .plan:last-child {
+  background: #15394c;
+  width: 230px;
+  color: #fff;
+}
+section.pricing .container .subscriptions .enterprise .main_container {
+  background: 0 0;
+}
+section.pricing
+  .container
+  .subscriptions
+  .enterprise
+  .main_container
+  .price
+  small.yearly_price {
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 12px;
+}
+section.pricing .container .subscriptions .enterprise .main_container a {
+  background: #f47b21;
+  color: #fff;
+  width: 88%;
+}
+section.pricing .container .subscriptions .business .features_container ul {
+  border-right: none;
+}
+
+/* Customers */
+section.customers ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+section.customers ul li {
+  font-family: Promo, Helvetica, Arial, sans-serif;
+  display: inline-block;
+  width: 187px;
+  height: 50px;
+  background: url("https: /userstack.com/site_images/cust_accenture.png");
+  background-size: 138px;
+  position: relative;
+}
+section.customers ul li:nth-child(1) {
+  font-weight: 300;
+  font-size: 15px;
+  background: 0 0;
+  width: 185px;
+  top: -19px;
+  text-align: left;
+}
+section.customers ul li.deloitte {
+  background: url(https://weatherstack.com/site_images/client_deloitte.svg);
+  background-size: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.customers ul li.microsoft {
+  background: url(https://weatherstack.com/site_images/client_microsoft.svg);
+  background-size: 135px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.customers ul li.warnerbros {
+  background: url(https://weatherstack.com/site_images/client_warnerbros.svg);
+  background-size: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 110px;
+}
+section.customers ul li.wawa {
+  background: url(https://weatherstack.com/site_images/client_wawa.svg);
+  background-size: 85px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -4px;
+  width: 132px;
+  left: 4px;
+}
+section.customers ul li.schneider {
+  background: url(https://weatherstack.com/site_images/client_schneider.svg);
+  background-size: 125px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 4px;
+}
+section.customers ul li.ericsson {
+  background: url(https://weatherstack.com/site_images/client_ericsson_2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 112px;
+  top: -1px;
+}
+
+/* Features Roundup */
+section.features_roundup {
+  padding: 50px 0 40px;
+  background-color: #eff2f5;
+  background: #eff2f5
+    url(https://weatherstack.com/site_images/world_map_vector_objects.svg);
+  background-size: 950px;
+  background-position: center top;
+  background-position-y: top;
+  background-position-y: 110px;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+section.features_roundup h4 {
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 300;
+  font-family: Promo, Helvetica, Arial, sans-serif;
+  margin-bottom: 260px;
+}
+section.features_roundup .row {
+  display: block;
+  padding: 20px 0;
+  position: relative;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 125px;
+  padding-bottom: 25px;
+}
+section.features_roundup .row .heading {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+section.features_roundup .row .heading::before {
+  font-family: Linearicons;
+  font-size: 60px;
+  display: inline-block;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  margin-right: 10px;
+  vertical-align: middle;
+  content: "\e6b3";
+  top: 5px;
+  left: 10px;
+  position: absolute;
+  color: #a4b6c5;
+}
+section.features_roundup .row p {
+  max-width: 500px;
+}
+section.features_roundup .row .included_in {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 20px 0;
+  height: 82px;
+  border-left: 2px dashed #dde2e6;
+  padding-left: 45px;
+  padding-top: 17px;
+  text-align: left;
+  width: 240px;
+}
+section.features_roundup .row .included_in span:first-of-type {
+  display: block;
+  font-weight: bold;
+  background: #416376;
+  width: 80px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+section.features_roundup .row.realtime_weather .heading::before {
+  content: "\e655";
+  top: 45px;
+}
+section.features_roundup .row.location_search .heading::before {
+  content: "\e778";
+}
+section.features_roundup .row.astronomy_data .heading::before {
+  content: "\e645";
+}
+section.features_roundup .row.hourbyhour_data .heading::before {
+  content: "\e8ea";
+}
+section.features_roundup .row.historical_data .heading::before {
+  content: "\e8e4";
+}
+section.features_roundup .row.forecast_data .heading::before {
+  content: "\e647";
+}
+section.features_roundup .row.languages .heading::before {
+  content: "\e691";
+}
+section.features_roundup .row.bulk_queries .heading::before {
+  content: "\e977";
+}
+
+/* FAQ on Pricing */
+section.faq,
+section.faq.pricing,
+section.we_accept {
+  text-align: center;
+}
+section.faq {
+  color: rgba(22, 34, 47, 1);
+  padding: 40px 0 10px;
+  background: #fff;
+}
+section.faq .container h2 {
+  font-size: 25px;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+section.faq .container .inline_left {
+  display: inline-block;
+  width: 500px;
+  margin-right: 25px;
+  vertical-align: top;
+}
+section.faq .container .inline_right {
+  display: inline-block;
+  width: 500px;
+  margin-left: 25px;
+  vertical-align: top;
+}
+section.faq,
+section.faq.pricing,
+section.we_accept {
+  text-align: center;
+}
+section.faq .container .topic {
+  margin: 0 auto 35px;
+  text-align: left;
+}
+
+section.faq .container .topic h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #949494;
+  line-height: normal;
+  font-weight: 300;
+  font-family: Promo, Helvetica, Arial, sans-serif;
+}
+section.faq .container .topic ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section.faq .container .topic ul li p.question {
+  position: relative;
+  font-weight: 600;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #dedee1;
+  cursor: pointer;
+}
+section.faq .container .topic ul li p.answer {
+  display: none;
+  background: #ebeff4;
+  padding: 20px 15px;
+  line-height: 23px;
+  margin: 0;
+}
+section.faq .container .topic ul li p.question::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  right: 15px;
+  margin-left: -6px;
+  margin-top: -1px;
+  background: #aaadb1;
+}
+section.faq .container .topic ul li p.question::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  top: 50%;
+  right: 20px;
+  margin-left: -1px;
+  margin-top: -6px;
+  transition: transform 0.25s ease, opacity 0.25s ease 75ms;
+  background: #aaadb1;
+}
+section.faq .container .topic > a::after {
+  font-family: Linearicons;
+  font-size: 20px;
+  font-weight: 700;
+  content: "\e944";
+  position: absolute;
+  right: 17px;
+  top: 10px;
+}
+section.faq .container .topic ul li:not(.open):hover p.question:after,
+section.faq .container .topic ul li:not(.open):hover p.question:before {
+  background: #4f78a9;
+}
+section.faq .container .topic > a.view_all {
+  background: 0 0;
+  left: -20px;
+}
+section.faq .container .topic > a {
+  padding: 15px 40px 15px 10px;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 14px;
+  font-family: Promo, Helvetica, Arial, sans-serif;
+  width: 300px;
+  border-radius: 3px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  background: #c8d3dd;
+  color: #7e8e9e;
+}
+
+/* cta */
+section.cta {
+  padding: 45px 30px 50px 30px;
+  font-family: Promo, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  background: #eef2f5;
+  background-repeat: repeat;
+  background-size: auto;
+  background-size: 20%;
+  background-repeat: no-repeat;
+}
+section.cta p span::after {
+  font-family: Linearicons;
+  font-size: 20px;
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-top: 0;
+  content: "\e944";
+  position: relative;
+  position: absolute;
+}
+section.cta p {
+  font-size: 17px;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+section.cta p span {
+  padding-right: 30px;
+  font-weight: 300;
+  position: relative;
+  top: 1px;
+}
+section.cta a {
+  background: #f47b21;
+  padding: 17px 15px;
+  width: auto;
+  height: auto;
+  margin-left: 20px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  top: -1px;
+  position: relative;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 50px 0;
+  background: #184157;
+  font-size: 14px;
+  color: #fff;
+}
+.container.custom-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.container.custom-container ul {
+  width: 196px;
+}
+.right_side.copyright-section {
+  width: 27%;
+}
+footer .right_side {
+  font-size: 12px;
+  position: relative;
+  top: 3px;
+  vertical-align: top;
+  width: 250px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer .right_side,
+footer ul {
+  display: inline-block;
+  text-align: left;
+  width: 150px;
+}
+footer ul li {
+  line-height: 30px;
+}
+footer .right_side img {
+  display: block;
+}
+.social-links {
+  display: flex;
+  margin-top: 20px;
+}
+.social-logo {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+footer ul li.heading {
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: Promo, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+footer ul li a {
+  color: #fff;
+  cursor: pointer;
+}
+.copyright-link a {
+  color: #fff;
+}
+.copyright-link {
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.copyright-text a {
+  color: #fff;
+  text-decoration: underline;
+}
+.copyright-text {
+  font-size: 12px;
+}
