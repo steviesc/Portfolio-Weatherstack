@@ -195,3 +195,14 @@ function updateSelectedButton(event) {
 document.addEventListener("DOMContentLoaded", () => {
   showCurrentWeather(); // Call with no event
 });
+
+//Navbar Scroll
+const navbar = document.querySelector("nav");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    navbar.style.backgroundColor = "rgb(24, 65, 87)";
+  } else {
+    navbar.classList.remove("scrolled");
+    navbar.style.backgroundColor = "rgb(24, 65, 87,0)";
+  }
+});

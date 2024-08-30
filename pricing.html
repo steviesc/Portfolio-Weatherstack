@@ -9,22 +9,22 @@
     <script type="text/javascript" src="./prettify.js"></script>
   </head>
   <body>
-    <nav class="header">
-        <div class="container">
-          <div class="logo">
-            <a href="/">
-              <img
+    <nav class="header" style="position: fixed; top: 0px; left: 0px; width: 100%; background-color: rgb(24, 65, 87,0); z-index: 1000;">
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img
                 draggable="false"
                 src="./Pic/weatherstack_logo_white.png"
                 alt="weatherstack Logo"
                 width="202"
                 height="28"
-              />
+            />
           </a>
-          </div>
-            <ul >
-              <li style=display:inline><a title="Pricing Plans" href="">Pricing</a></li>
-              <li style=display:inline><a title="API Documentation" href="">Documentation</a></li>
+        </div>
+            <ul>
+              <li style=display:inline><a title="Pricing Plans" href="./pricing.html">Pricing</a></li>
+              <li style=display:inline><a title="API Documentation" href="/documentation.html">Documentation</a></li>
               <li style=display:inline><a title="Frequently Asked Questions" href="">FAQ</a></li>
               <li style=display:inline><a title="Affiliate Program" href="">Affiliates</a></li>
               <li style=display:inline><a title="apiplayer Blog" href="">Blog</a></li>
@@ -32,12 +32,12 @@
                 <a title="weatherstack System Status" href="https://status.weatherstack.com/">
                   <div class="greencircle"></div>Status</a>
               </li>
-              <li class="action login" style=display:inline><a title="Log in to your account" href="">Log In</a></li>
-              <li class="action cta" style=display:inline><a title="Start using the API" href="">SIGN UP FREE</a></li>
+              <li class="action login" style=display:inline><a title="Log in to your account" href="./login.html">Log In</a></li>
+              <li class="action cta" style=display:inline><a title="Start using the API" href="./signup.html">SIGN UP FREE</a></li>
             </ul>
-          </div>
         </div>
-      </nav>
+      </div>
+    </nav>
     <section class="hero pricing">
         <div class="container">
             <h2>Fair Pricing for Any Weather</h2>
@@ -352,9 +352,8 @@
                             <p class="question">What happens if I exceed my API Request volume?</p>
                             <p class="answer">Users will be automatically notified via email and in their account dashboard as soon as at least 75%, 90%, and 100% of their monthly API quota has been reached. After reaching 100% of the allowance, overages fees will apply so we make sure you won’t experience any disruptions and your website/application will keep running smoothly. You can learn more about overages </p>
                         </li>
-                        <li>
-                            <a href="">
-                            <p class="question">What is the API's uptime?</p></a>
+                        <li>                          
+                            <p class="question">What is the API's uptime?</p>
                             <p class="answer">
                                 <a href="">Our API's system status is closely monitored around the clock. Every effort is made to ensure the highest possible level of availability and consistency, and we are proud to have an average uptime rate of nearly 100% (99.9%), calculated based on the past 12 months. <br><br>
                                 There is a public API status page available at the following URL: </a>
@@ -445,7 +444,7 @@
               <a href="https://weatherstack.com/sitemap.php" target="_blank">Sitemap</a>
             </div>
             <div class="copyright-text">
-              <span>© 2022 Weatherstack API, an 
+              <span>© 2024 Weatherstack API, an 
                 <a href="https://apilayer.com/" target="_blank">APILayer</a>
                 product. All rights reserved.
               </span>
@@ -453,66 +452,90 @@
           </div>
     </footer>
     <script>
-   document.addEventListener("DOMContentLoaded", function() {
-  const yearlyBillingLink = document.querySelector(".yearly");
-  const monthlyBillingLink = document.querySelector(".monthly");
-  yearlyBillingLink.addEventListener("click", function(event) {
-    event.preventDefault();
-    toggleBilling("yearly");
-    updatePrices("yearly")
-  });
-
-  monthlyBillingLink.addEventListener("click", function(event) {
-    event.preventDefault();
-    toggleBilling("monthly");
-    updatePrices("monthly")
-  });
-
-  function toggleBilling(billingType) {
-    if (billingType === "yearly") {
-      yearlyBillingLink.classList.add("selected");
-      monthlyBillingLink.classList.remove("selected");
-      updatePrices("yearly");
-    } else if (billingType === "monthly") {
-      monthlyBillingLink.classList.add("selected");
-      yearlyBillingLink.classList.remove("selected");
-      updatePrices("monthly");
-    }
-  }
-
-  function updatePrices(billingType) {
-    document.querySelectorAll(".plan").forEach((planElement) => {
-      const priceElement = planElement.querySelector(".price span");
-      const yearlyPriceElement = planElement.querySelector(".yearly_price");
-      if (!priceElement || !yearlyPriceElement) return;
-    const priceText = priceElement.textContent.replace('$', '').trim();
-      let currentPrice = parseFloat(priceText);
-      if (billingType === "yearly") {
-        if (currentPrice === 9) {
-          priceElement.textContent = "$8";
-          yearlyPriceElement.textContent = "billed yearly";
-        } else if (currentPrice === 49) {
-          priceElement.textContent = "$43";
-          yearlyPriceElement.textContent = "billed yearly";
-        } else if (currentPrice === 99) {
-          priceElement.textContent = "$84";
-          yearlyPriceElement.textContent = "billed yearly";
+      //Navbar Scroll
+      const navbar = document.querySelector("nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 0) {
+          navbar.style.backgroundColor = "rgb(24, 65, 87)";
+        } else {
+          navbar.classList.remove("scrolled");
+          navbar.style.backgroundColor = "rgb(24, 65, 87,0)";
         }
-      } else if (billingType === "monthly") {
-        if (currentPrice === 8) {
-          priceElement.textContent = "$9";
-          yearlyPriceElement.textContent = "or $8.99 if billed yearly";
-        } else if (currentPrice === 43) {
-          priceElement.textContent = "$49";
-          yearlyPriceElement.textContent = "or $43.99 if billed yearly";
-        } else if (currentPrice === 84) {
-          priceElement.textContent = "$99";
-          yearlyPriceElement.textContent = "or $84.99 if billed yearly";
+      });
+      document.addEventListener("DOMContentLoaded", function() {
+        const yearlyBillingLink = document.querySelector(".yearly");
+        const monthlyBillingLink = document.querySelector(".monthly");
+        yearlyBillingLink.addEventListener("click", function(event) {
+          event.preventDefault();
+          toggleBilling("yearly");
+          updatePrices("yearly")
+        });
+
+        monthlyBillingLink.addEventListener("click", function(event) {
+          event.preventDefault();
+          toggleBilling("monthly");
+          updatePrices("monthly")
+        });
+
+        function toggleBilling(billingType) {
+          if (billingType === "yearly") {
+            yearlyBillingLink.classList.add("selected");
+            monthlyBillingLink.classList.remove("selected");
+            updatePrices("yearly");
+          } else if (billingType === "monthly") {
+            monthlyBillingLink.classList.add("selected");
+            yearlyBillingLink.classList.remove("selected");
+            updatePrices("monthly");
+          }
         }
-      }
-    });
-  }
-});
+
+        function updatePrices(billingType) {
+          document.querySelectorAll(".plan").forEach((planElement) => {
+            const priceElement = planElement.querySelector(".price span");
+            const yearlyPriceElement = planElement.querySelector(".yearly_price");
+            if (!priceElement || !yearlyPriceElement) return;
+          const priceText = priceElement.textContent.replace('$', '').trim();
+            let currentPrice = parseFloat(priceText);
+            if (billingType === "yearly") {
+              if (currentPrice === 9) {
+                priceElement.textContent = "$8";
+                yearlyPriceElement.textContent = "billed yearly";
+              } else if (currentPrice === 49) {
+                priceElement.textContent = "$43";
+                yearlyPriceElement.textContent = "billed yearly";
+              } else if (currentPrice === 99) {
+                priceElement.textContent = "$84";
+                yearlyPriceElement.textContent = "billed yearly";
+              }
+            } else if (billingType === "monthly") {
+              if (currentPrice === 8) {
+                priceElement.textContent = "$9";
+                yearlyPriceElement.textContent = "or $8.99 if billed yearly";
+              } else if (currentPrice === 43) {
+                priceElement.textContent = "$49";
+                yearlyPriceElement.textContent = "or $43.99 if billed yearly";
+              } else if (currentPrice === 84) {
+                priceElement.textContent = "$99";
+                yearlyPriceElement.textContent = "or $84.99 if billed yearly";
+              }
+            }
+          });
+        }
+      });
+      const questions=document.querySelectorAll(".question")
+      console.log(questions);
+      const answers=document.querySelectorAll(".answer")
+      console.log(answers);
+      questions.forEach((question, index) => {
+        question.addEventListener('click', () => {
+          const answer = answers[index];
+          if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+          } else {
+            answer.style.display = 'block';
+          }
+        });
+      });
     </script>
   </body>
 </html>

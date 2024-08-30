@@ -10,7 +10,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> -->
   </head>
   <body onload="PR.prettyPrint()">
-    <nav class="header index">
+    <nav class="header index" style="position: fixed; top: 0px; left: 0px; width: 100%; background-color: rgb(24, 65, 87,0); z-index: 1000;">
       <div class="container">
         <div class="logo">
           <a href="/">
@@ -34,8 +34,8 @@
             <a title="weatherstack System Status" href="https://status.weatherstack.com/">
               <div class="greencircle"></div>Status</a>
           </li>
-          <li class="action login" style=display:inline><a title="Log in to your account" href="">Log In</a></li>
-          <li class="action cta" style=display:inline><a title="Start using the API" href="">SIGN UP FREE</a></li>
+          <li class="action login" style=display:inline><a title="Log in to your account" href="./login.html">Log In</a></li>
+          <li class="action cta" style=display:inline><a title="Start using the API" href="./signup.html">SIGN UP FREE</a></li>
         </ul>
       </div>
     </nav>
@@ -291,7 +291,7 @@
         </p>
       </div>
     </section>
-  <footer>
+    <footer>
       <div class="container custom-container">
         <div class="right_side copyright-section">
           <div class="footer-logo">
@@ -341,7 +341,7 @@
         </ul>
         <ul style="list-style: none">
           <li class="heading">ACCOUNT</li>
-          <li><a href="">Log In</a></li>
+          <li><a href="./login.html">Log In</a></li>
           <li><a href="">Forgot Password</a></li>
           <li><a href="">FREE Signup</a></li>
         </ul>
@@ -360,7 +360,7 @@
           <a href="https://weatherstack.com/sitemap.php" target="_blank">Sitemap</a>
         </div>
         <div class="copyright-text">
-          <span>© 2022 Weatherstack API, an 
+          <span>© 2024 Weatherstack API, an 
             <a href="https://apilayer.com/" target="_blank">APILayer</a>
             product. All rights reserved.
           </span>

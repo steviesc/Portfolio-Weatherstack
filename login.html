@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./login.css">
+    <title>Login</title>
+  </head>
+  <body>
+    <nav class="header" style="position: fixed; top: 0px; left: 0px; width: 100%; background-color: rgb(24, 65, 87,0); z-index: 1000;">
+        <div class="container">
+          <div class="logo">
+            <a href="/">
+              <img
+                  draggable="false"
+                  src="./Pic/weatherstack_logo_white.png"
+                  alt="weatherstack Logo"
+                  width="202"
+                  height="28"
+              />
+            </a>
+          </div>
+              <ul>
+                <li style=display:inline><a title="Pricing Plans" href="./pricing.html">Pricing</a></li>
+                <li style=display:inline><a title="API Documentation" href="./documentation.html">Documentation</a></li>
+                <li style=display:inline><a title="Frequently Asked Questions" href="">FAQ</a></li>
+                <li style=display:inline><a title="Affiliate Program" href="">Affiliates</a></li>
+                <li style=display:inline><a title="apiplayer Blog" href="">Blog</a></li>
+                <li class="status" style=display:inline>
+                  <a title="weatherstack System Status" href="https://status.weatherstack.com/">
+                    <div class="greencircle"></div>Status</a>
+                </li>
+                <li class="action login" style=display:inline><a title="Log in to your account" href="./login.html">Log In</a></li>
+                <li class="action cta" style=display:inline><a title="Start using the API" href="./signup.html">SIGN UP FREE</a></li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    <section class="preapp login">
+        <div class="container">
+            <h2>
+                <strong>Log in</strong>
+            </h2>
+            <form action="" name="login">
+                <fieldset class="alerts hidden" >Please enter your account email and password. </fieldset>
+                <fieldset>
+                    <div class="line">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email_address" value="">
+                    </div>
+                    <div class="line">
+                        <label for="password">Password
+                            <a href="" class="forgot" title="Reset your password">Forgot Password</a>
+                        </label>
+                        <input type="password" id="password" name="password" value="">
+                    </div>
+                    <label for="submit" class="submit">Log in</label>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <section class="cta in_preapp">
+        <div class="container">
+            <p>
+                <span>Don't have an account yet? Get your API key today — it's free</span>
+                <a href="/signup/free" title="Get free API access">Get Free API Key</a>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="container custom-container">
+          <div class="right_side copyright-section">
+            <div class="footer-logo">
+              <a href="">
+                <img class="logo" draggable="false"
+                src="https://weatherstack.com/site_images/weatherstack_logo_footer.png"
+                alt="weatherstack Logo"
+                width="197"
+                height="35">
+              </a>
+            </div>
+            <div class="social-links">
+              <div class="github social-logo"><a target="_blank" href="https://github.com/apilayer/weatherstack">
+                <img src="https://weatherstack.com/site_images/github-original.svg" alt="" draggable="false" width="25" height="25">
+              </a></div>
+              <div class="facebook social-logo"><a href="https://www.facebook.com/APILayer/" target="_blank">
+                <img draggable="false" src="https://weatherstack.com/site_images/facebook-original.svg" alt="" width="25" height="25">
+              </a></div>
+              <div class="instagram social-logo"><a href="https://www.instagram.com/apilayer/" target="_blank">
+                <img src="https://weatherstack.com/site_images/instagram.png" alt="" draggable="false" width="25" height="25" >
+              </a></div>
+              <div class="youtube social-logo"><a href="https://www.youtube.com/channel/UCwDncja3klyMhkKXWV1zoNQ" target="_blank">
+                <img src="https://weatherstack.com/site_images/youtube.png" alt="" draggable="false" width="25" height="25">
+              </a></div>
+              <div class="twitter social-logo"><a href="https://twitter.com/apilayer/" target="_blank">
+                <img src="https://weatherstack.com/site_images/twitter-original.svg" alt="" draggable="false" width="25" height="25">
+              </a></div>
+              <div class="linkedin social-logo"><a href="https://www.linkedin.com/authwall?trk=ripf&trkInfo=AQESw3_dz9mOEAAAAYMMykyAXLrKWTKL3Q6geO69ZLgKpP17rEgX7iUGjaigeEGynL1Rie-9w6to3tGsRihPBx-uPO7pGgRqEJ4FblxJDHlbg_VON-P_QB1Wzu_fRjrA8auiqyg=&original_referer=https://apilayer.com/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fapilayer%2F" target="_blank">
+                <img src="https://weatherstack.com/site_images/linkedin-original.svg" alt="" draggable="false" width="25" height="25" >
+              </a></div>
+            </div>
+          </div>
+          <ul style="list-style: none;">
+            <li class="heading">PRODUCT</li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="https://apilayer.com/provider">List Your API</a></li>
+            <li><a href="https://apilayer.com/why-choose-apilayer">Why choose us?</a></li>
+            <li><a href="https://apilayer.com/marketplace">Marketplace</a></li>
+            <li><a href="">Affiliates</a></li>
+          </ul>
+          <ul style="list-style: none">
+            <li class="heading">DOCS & HELP</li>
+            <li><a href="/documentation.html">Documentation</a></li>
+            <li><a href="https://blog.weatherstack.com/">Blog</a></li>
+            <li><a href="">FAQS</a></li>
+            <li><a href="">API Glossary</a></li>
+          </ul>
+          <ul style="list-style: none">
+            <li class="heading">ACCOUNT</li>
+            <li><a href="">Log In</a></li>
+            <li><a href="">Forgot Password</a></li>
+            <li><a href="">FREE Signup</a></li>
+          </ul>
+          <ul style="list-style: none">
+            <li class="heading">GET IN TOUCH</li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Get a quote</a></li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="copyright-link">
+            <a href="https://www.ideracorp.com/legal/APILayer" target="_blank">Imprint / Legal</a>|
+            <a href="https://www.ideracorp.com/Legal/APILayer/PrivacyStatement" target="_blank">Privacy</a>|
+            <a href="https://www.ideracorp.com/Legal/Terms-of-Use" target="_blank">Terms</a>|
+            <a href="https://www.ideracorp.com/Legal/APILayer/PrivacyStatement" target="_blank">Cookie Preference</a>|
+            <a href="https://weatherstack.com/sitemap.php" target="_blank">Sitemap</a>
+          </div>
+          <div class="copyright-text">
+            <span>© 2024 Weatherstack API, an 
+              <a href="https://apilayer.com/" target="_blank">APILayer</a>
+              product. All rights reserved.
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script>
+        //Navbar Scroll
+        const navbar = document.querySelector("nav");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 0) {
+            navbar.style.backgroundColor = "rgb(24, 65, 87)";
+          } else {
+            navbar.classList.remove("scrolled");
+            navbar.style.backgroundColor = "rgb(24, 65, 87,0)";
+          }
+        });
+        //submit
+        let submit=document.querySelector('.submit')
+        console.log(submit);
+        let alerts=document.querySelector('.alerts')
+        submit.addEventListener("click",()=>{
+          alerts.style.display="block"
+        })
+      </script>
+  </body>
+</html>
